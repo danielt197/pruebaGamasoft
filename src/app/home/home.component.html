@@ -1,5 +1,5 @@
 <br><br>
-
+<!-- Template del modal que se despliega con el ícono de información -->
 <ng-template #infoContact let-modal>
 
     <div class="modal-header">
@@ -33,6 +33,7 @@
 
 </ng-template>
 
+<!-- Barra de busqueda  -->
 <div class="input-group mb-3">
     <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1"><img src="../../assets/img/search.png" alt="search"></span>
@@ -40,6 +41,7 @@
     <input type="search" class="form-control" placeholder="Title" aria-describedby="basic-addon1" name="searchText">
 </div>
 
+<!-- Cuerpo de la aplicación -->
 <div class="content">
     <table class="table table-striped">
         <tr>
@@ -60,6 +62,7 @@
     <br>
 </div>
 
+<!-- Contrlo de la paginación -->
 <div class="pagination">
     <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>

@@ -35,11 +35,3 @@ table{
     display: flex;
     justify-content: center;
 }
-
-.modal-table{
-    width: 100%;
-}
-
-.modal-table th{
-    padding-right: 5px;
-}

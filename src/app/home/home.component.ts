@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
     public modal: NgbModal
   ) { }
 
+  // Variables globales
   page: number = 1;
   apiData: any = null;
   searchText = '';
@@ -33,6 +34,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+  // Función que despliega el modal de la información de contacto
   openModal(id: number,title:string, completed:boolean, content:any){
     this.modal.open(content);
     this.idContact = id;
