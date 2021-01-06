@@ -1,0 +1,65 @@
+<br><br>
+
+<ng-template #infoContact let-modal>
+
+    <div class="modal-header">
+        <h4 class="modal-title">&nbsp;&nbsp;Información de contacto</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="img">
+            <img src="../../assets/img/user.png">
+        </div>
+        
+        <br>
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <td>{{idContact}}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{titleContact}}</td>
+            </tr>
+            <tr>
+                <th>Completed</th>
+                <td>{{completedContact}}</td>
+            </tr>
+        </table>
+    </div>
+
+</ng-template>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><img src="../../assets/img/search.png" alt="search"></span>
+    </div>
+    <input type="search" class="form-control" placeholder="Title" aria-describedby="basic-addon1" name="searchText">
+</div>
+
+<div class="content">
+    <table class="table table-striped">
+        <tr>
+            <th>Id User</th>
+            <th>Title</th>
+            <th>Completed</th>
+            <th>Info</th>
+        </tr>
+        <tr *ngFor="let info of apiData | paginate: {itemsPerPage : 7, currentPage: page }">
+            <td> {{info.id}} </td>
+            <td> {{info.title}} </td>
+            <td> {{info.completed}} </td>
+            <td><a (click)="openModal(info.id,info.title,info.completed,infoContact)">
+                    <img src="../../assets/img/info.png">
+                </a></td>
+        </tr>
+    </table>
+    <br>
+</div>
+
+<div class="pagination">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

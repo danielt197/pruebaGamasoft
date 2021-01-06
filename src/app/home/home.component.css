@@ -1,0 +1,45 @@
+table{
+    background-color: white;
+}
+
+.content, .pagination{
+    margin: auto;
+    max-width: 900px;
+    display:flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.pagination{
+    max-width: 500px;
+    background-color: #10813e;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.input-group{
+    margin:auto;
+    max-width: 900px;
+}
+
+.modal-header{
+    background-color: #149347;
+}
+.modal-body{
+    background-color: white;
+    padding: 50px;
+    font-size: large;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-table{
+    width: 100%;
+}
+
+.modal-table th{
+    padding-right: 5px;
+}
